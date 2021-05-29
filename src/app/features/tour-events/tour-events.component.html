@@ -1,1 +1,20 @@
-<p>tour-events works!</p>
+<h1>Tour Events</h1>
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Venue</th>
+        <th>City</th>
+        <th>Time</th>
+        <th>Tickets</th>
+    </tr>
+    <tr *ngFor="let event of events">
+        <td>{{event.date | date: 'fullDate'}}</td>
+        <td>{{event.venue | titlecase}}</td>
+        <td>
+            <span *ngIf="event.region">{{event.city | titlecase}}, {{event.region | uppercase}} ({{event.country | uppercase}})</span>
+            <span *ngIf="!event.region">{{event.city | titlecase}} ({{event.country | uppercase}})</span>
+        </td>
+        <td>{{event.date | date: 'shortTime'}}</td>
+        <td><a href="{{event.ticketsLink}}">Tickets</a></td>
+    </tr>
+</table>
