@@ -3,7 +3,7 @@ export interface TourEvent {
     city: string;
     country: string;
     date: Date;
-    startTime: Date;
+    region: string;
     ticketsLink: string;
     venue: string;
 }
