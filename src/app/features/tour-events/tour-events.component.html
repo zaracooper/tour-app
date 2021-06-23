@@ -1,5 +1,5 @@
 <h1>Tour Events</h1>
-<table *ngIf="events$ | alias as events">
+<table *ngIf="events$ | async as events">
     <tr>
         <th>Date</th>
         <th>Venue</th>
