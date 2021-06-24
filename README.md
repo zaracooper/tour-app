@@ -1,4 +1,4 @@
-# TourApp
+# Tour App
 
 1. Install dependencies:
 ```
